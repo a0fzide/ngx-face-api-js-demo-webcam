@@ -1,0 +1,27 @@
+<h1>ngx-face-api-js</h1>
+
+<h2>web cam</h2>
+<div><video allFaces #video id="video" width="240" height="240" autoplay></video></div>
+<h2>Detect Face</h2>
+<img
+  allFaces
+  [src]="imageSrc"
+  width="300px"/>
+<br/>
+
+<h2>With Expressions and Landmarks</h2>
+<img
+  allFaces [with]="['expressions', 'landmarks']"
+  [src]="imageSrc"
+  width="300px"/>
+
+
+<h2>With Age and Gender</h2>
+<img
+  allFaces [with]="['landmarks', 'ageAndGender']"
+  [src]="imageSrc"
+  width="300px"/>
+
+
+<h2>Select File</h2>
+<input type="file" (change)="selectFile($event)">
